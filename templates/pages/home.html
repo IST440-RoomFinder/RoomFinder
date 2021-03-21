@@ -5,10 +5,47 @@
 
 {% block content %}
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <img src="{% static 'images/logo.png' %}" class="img-fluid" alt="DjangoX logo"/>
-  <p class="lead">Hello, this is IST 440 project.</p>
-  <p>This is Rickie</p>
-  <p>I changed something</p>
-  <p>hey hey</p>
+  <h2>Building: </h2> <span> <h2> Placeholder Building </h2> </span>
+  <img src="https://via.placeholder.com/1200x800" onclick="submit()" class="img-fluid" alt="DjangoX logo"/>
+
+  <div class="container">
+    <div class="row py-2">
+      <div class="col-md-4">
+        <label for="start">Start Point: </label>
+        <select name="start" id="startpoint">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label for="end">End Point: </label>
+        <select name="end" id="endpoint">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <form name="formRoute" method="get">
+          <input id="startSubmit" type="hidden" name="startpoint" value="">
+          <input id="endSubmit" type="hidden" name="endpoint" value="">
+          <p onclick="submit()" class="btn btn-primary">Create Route</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
 </div>
 {% endblock content %}
+
+{% block script %}
+{% endblock %}
